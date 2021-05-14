@@ -2,7 +2,7 @@
 
 <hr />
 
-<form #courseForm="ngForm" action="">
+<form #courseForm="ngForm" *ngIf="course">
   <div class="form-group row">
     <label class="col-sm-2 col-form-label">Name:</label>
 
@@ -82,7 +82,7 @@
   </div>
   <button
     [disabled]="courseForm.invalid"
-    (click)="(save)"
+    (click)="save()"
     class="btn btn-primary mr-2"
   >
     Save
